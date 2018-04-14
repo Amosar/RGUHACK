@@ -15,7 +15,7 @@ app.use(express.static('public'));
 function connect(callback) {
     // Use connect method to connect to the server
     MongoClient.connect(url, function (err, client) {
-
+        console.log(err);
         const db = client.db(dbName);
         callback(db, client);
     });
