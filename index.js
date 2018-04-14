@@ -10,6 +10,8 @@ const url = 'mongodb://hackuser:hackuser@csdm-mongodb.rgu.ac.uk/hackais';
 // Database Name
 const dbName = 'hackais';
 
+app.use(express.static('public'));
+
 function connect(callback) {
     // Use connect method to connect to the server
     MongoClient.connect(url, function (err, client) {
