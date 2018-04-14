@@ -4,7 +4,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   width:100%;
+  background-color: #91E7FA;
 }
+
+
+/* Header css */
+
+header {
+    background-color: cornflowerblue;
+}
+
+
 
 .mapContainer{
 }
@@ -16,3 +26,11 @@ body {
   width: 80%;
   overflow:visible;
 }
+
+
+/* Footer css */
+
+footer {
+    background-color: cornflowerblue;
+}
+
