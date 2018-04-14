@@ -4,16 +4,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   width:100%;
-  background-color: #91E7FA;
+  background-color: #dbe4f0;
+
 }
 
 
 /* Header css */
 
 header {
-    background-color: cornflowerblue;
+  background-color: cornflowerblue;
+  color: #263c5a;
 }
 
+
+/* A css */
+
+a {
+  color: #263c5a;
+}
+
+
+/* Button css */
+
+button {
+  color: #263c5a;
+}
+
+
+/* P css */
+
+p {
+  color: #263c5a;
+}
 
 
 .mapContainer{
@@ -31,6 +53,7 @@ header {
 /* Footer css */
 
 footer {
-    background-color: cornflowerblue;
+  background-color: cornflowerblue;
+  color: #263c5a;
 }
 
