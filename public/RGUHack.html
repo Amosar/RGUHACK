@@ -17,6 +17,7 @@
       <h1> Triton </h1>
     </header>
 
+
   <!--  <div class="topnav">
       <a class="active" href="#home">Home</a>
       <a href="#news">News</a>
@@ -69,17 +70,19 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('mapId'), {
-          zoom: 3,
-          center: {lat: 0, lng: -180},
+          zoom: 6,
+          center: {lat: 58, lng: -2.099075},
           mapTypeId: 'terrain'
         });
 
         var flightPlanCoordinates = [
-          {lat: -1.61552, lng: 60.169123},
-          {lat: 21.291, lng: -157.821},
-          {lat: -18.142, lng: 178.431},
-          {lat: -27.467, lng: 153.027}
+          //{lat: 60.169123 , lng: -1.61552},
+          {lat: 60.169352, lng: -1.163253},
+          {lat: 60.169355, lng: -1.16327},
+          {lat: 60.169363, lng: -1.163257},
+          {lat: 60.169353, lng: -1.163268}
         ];
+
         var flightPath = new google.maps.Polyline({
           path: flightPlanCoordinates,
           geodesic: true,
