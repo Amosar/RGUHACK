@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="js/googleMaps.js"> </script>
+    <!-- <script src="js/googleMaps.js"> </script> -->
     <meta charset="UTF-8">
     <title> RGUHack! </title>
 
@@ -60,23 +60,51 @@
       </div>
     </nav>
 
-    <div class="mapContainer" id="mapid">
-      <!-- the map goes here -->
-    </div>
+    <script>
+
+      // This example creates a 2-pixel-wide red polyline showing the path of
+      // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+      // Australia which was made by Charles Kingsford Smith.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('mapId'), {
+          zoom: 3,
+          center: {lat: 0, lng: -180},
+          mapTypeId: 'terrain'
+        });
+
+        var flightPlanCoordinates = [
+          {lat: -1.61552, lng: 60.169123},
+          {lat: 21.291, lng: -157.821},
+          {lat: -18.142, lng: 178.431},
+          {lat: -27.467, lng: 153.027}
+        ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+        console.log(document.getElementById('mapId'));
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ojhxXumuuDx3Tsx_WmxYy8mQDEEFqD0&callback=initMap">
+    </script>
 
     <section>
-    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
-      et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-      eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-      molestiae voluptatibus. </p>
-    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
-      et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-      eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-      molestiae voluptatibus. </p>
-    <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
-      et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
-      eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
-      molestiae voluptatibus. </p>
+      <div class="mapContainer" id="mapId">
+        <!-- the map goes here -->
+      </div>
+      <div class="buttonContain">
+        <button>Click me!</button>
+        <button>Click me!</button>
+        <button>Click me!</button>
+        <button>Click me!</button>
+      </div>
     <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque
       et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
       eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no

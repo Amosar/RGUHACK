@@ -1,4 +1,4 @@
-const api_key = "AIzaSyD1wu0c5kRaHUH7SvyTT8fpV01S-vFMemI";
+const api_key = "AIzaSyD8ojhxXumuuDx3Tsx_WmxYy8mQDEEFqD0";
 let markers = [];
 
 
