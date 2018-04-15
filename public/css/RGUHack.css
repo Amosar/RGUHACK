@@ -24,6 +24,52 @@ header {
   padding: 10px;
 }
 
+
+.departure{
+  background-color: #ACC0F8;
+}
+
+.departure:hover{
+  background-color: #DCE4FB;
+}
+
+
+.deviation{
+  background-color: #ACC0F8;
+}
+
+.deviation:hover{
+  background-color: #DCE4FB;
+}
+
+
+.restricted{
+  background-color: #ACC0F8;
+}
+
+.restricted:hover{
+  background-color: #DCE4FB;
+}
+
+
+.mmsi{
+  background-color: #ACC0F8;
+}
+
+.mmsi:hover{
+  background-color: #DCE4FB;
+}
+
+
+.meeting{
+  background-color: #ACC0F8;
+}
+
+.meeting:hover{
+  background-color: #DCE4FB;
+}
+
+
 /* A css */
 
 a {
