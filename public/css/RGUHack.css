@@ -18,6 +18,13 @@ header {
 }
 
 
+#triton {
+    width: 20%;
+    height: 20%;
+    padding: 15px;
+}
+
+
 /* Button class css */
 
 .buttonContain {
