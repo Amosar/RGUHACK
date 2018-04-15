@@ -4,6 +4,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width:100%;
+  height:100%;
   background-color: #dbe4f0;
 
 }
@@ -16,6 +17,12 @@ header {
   color: #263c5a;
 }
 
+
+/* Button class css */
+
+.buttonContain {
+  padding: 10px;
+}
 
 /* A css */
 
@@ -31,22 +38,49 @@ button {
 }
 
 
-/* P css */
+/* Button class css */
 
-p {
+.buttonContain {
+  margin-left: 23%;
+}
+
+
+/* h3 css */
+
+h3 {
   color: #263c5a;
 }
 
 
+/* P css */
+
+p {
+  color: #263c5a;
+  padding: 5px;
+}
+
+
+/* Map Container css */
+
 .mapContainer{
 }
+
+
+/* Map Id css */
 
 #mapId {
   margin-left: auto;
   margin-right: auto;
-  height: 500px;
-  width: 80%;
+  height: 800px;
+  width: 90%;
   overflow:visible;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.listy{
+  margin-left: 15%;
+   
 }
 
 
@@ -55,5 +89,6 @@ p {
 footer {
   background-color: cornflowerblue;
   color: #263c5a;
+  bottom: 0;
 }
 
