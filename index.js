@@ -21,6 +21,23 @@ function connect(callback) {
     });
 }
 
+
+// Distance returned is in m
+function distance(lat1, lon1, lat2, lon2) {
+    var p = 0.017453292519943295;    // Math.PI / 180
+    var c = Math.cos;
+    var a = 0.5 - c((lat2 - lat1) * p) / 2 +
+        c(lat1 * p) * c(lat2 * p) *
+        (1 - c((lon2 - lon1) * p)) / 2;
+
+    return 12742000 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
+}
+
+// a wrapper to facilitate usage with [lng, lat] locations
+function distanceLocLoc(loc1, loc2) {
+    return distance(loc1[1], loc1[0], loc2[1], loc2[0]);
+}
+
 app.get('/', function (req, res) {
 
 });
@@ -79,6 +96,24 @@ app.get('/positions', function (req, res) {
             client.close();
         });
     })
+});
+
+app.get('/dates', function (req, res) {
+    connect(function (db, client) {
+        const cPositions = db.collection('positions');
+
+        cPositions.find({MMSI:235105729, "RecvTime":{$gt:(new Date("2017-09-09")), $lt:(new Date("2017-09-10"))}}).toArray(function(err, docs) {
+            res.status(200).send(docs);
+            client.close();
+        });
+    })
+});
+
+app.get('/placeandtime', function (req, res) {
+    connect(function (db, client) {
+        const cPositions = db.collection('positions');
+
+    });
 });
 
 app.get('/towns', function (req, res) {
